@@ -23,6 +23,10 @@ const Dashboard = () => {
     changeToken(undefined);
   };
 
+    useEffect(() => {
+    changeToken(window.localStorage.getItem("token"));
+  }, []);
+
   return (
     <div>
       <div  className='fixed top-0 right-0 p-8'>
